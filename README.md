@@ -6,12 +6,22 @@ This plugin allows you to push and release an existing image on docker hub on he
 Usage
 ------
  
+The interaction with heroku is happening using docker commands and a little bit of curl. Therefore the plugin
+needs access to the underlying docker sock, provided via the volumes directive in the pipeline definition.
+
 ```
 pipeline:
   deploy:
     image: co0p/drone-heroku-container-plugin
-    container: co0p/advertdesk-api
-    app: advertdesk-api
+    container: <your/docker/image>
+    app: <your/heroku/app/name>
+    token: <your/heroku/access/token>
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       ```
+
+Requirements
+------------
+
+ * one app, one container. The app will be deployed as a WEB dyno
+ * 

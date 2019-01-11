@@ -1,0 +1,5 @@
+pipeline:
+  docker:
+    image: plugins/docker
+    repo: co0p/drone-heroku-container-plugin
+    secrets: [ docker_username, docker_password ]
