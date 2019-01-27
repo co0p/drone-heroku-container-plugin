@@ -4,5 +4,5 @@ LABEL description='Drone plugin to release docker image to heroku packaged on al
 
 ADD plugin.sh /bin/
 RUN chmod +x /bin/plugin.sh
-RUN apk -Uuv add docker curl ca-certificates
+RUN apk -Uuv add docker curl bash ca-certificates
 ENTRYPOINT /bin/plugin.sh
