@@ -1,7 +1,7 @@
 drone-heroku-plugin
 ===================
 
-This plugin allows you to deploy a docker image to heroku using the drone ci (v0.8x) .
+This plugin allows you to deploy a docker image to heroku using the drone ci (v0.8x). This application needs special privileges. 
 
 example pipeline:
 -----------------
@@ -17,4 +17,6 @@ The heroku token should be saved in drone's secrets vault.
     container: you/container
     app: <your/heroku/app>
     secrets: [ heroku_token ]
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
 ```

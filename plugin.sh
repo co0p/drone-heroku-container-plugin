@@ -1,7 +1,7 @@
 #/bin/sh
 
 # needed variables taken from environment
-TOKEN=${PLUGIN_HEROKU_TOKEN}
+TOKEN=${PLUGIN_TOKEN}
 CONTAINER=${PLUGIN_CONTAINER}
 APP=${PLUGIN_APP}
 PAYLOAD='{
