@@ -11,13 +11,15 @@ needs access to the underlying docker sock, provided via the volumes directive i
 
 __IMPORTANT: This images needs privileged access (Settings -> trusted)__
 
+add <your/heroku/access/token> to secrets as 'heroku_token' 
+
 ```
 pipeline:
   deploy:
     image: co0p/drone-heroku-container-plugin
     container: <your/docker/image>
     app: <your/heroku/app/name>
-    token: <your/heroku/access/token>
+    secrets: [ heroku_token ]
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       ```
