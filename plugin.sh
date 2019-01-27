@@ -1,9 +1,12 @@
 #/bin/sh
 
 # needed variables taken from environment
-TOKEN=${PLUGIN_TOKEN}
+SECRETS=${PLUGIN_SECRETS[TOKEN]}
+echo "token ${token}"
 CONTAINER=${PLUGIN_CONTAINER}
 APP=${PLUGIN_APP}
+echo "app ${APP}"
+
 PAYLOAD='{
   "updates": [
     {
