@@ -16,23 +16,5 @@ The heroku token should be saved in drone's secrets vault.
     image: co0p/drone-heroku-plugin
     container: you/container
     app: <your/heroku/app>
-    secrets: [ heroku_token ]```
-
-
-<<<<<<< HEAD
-add <your/heroku/access/token> to secrets as 'heroku_token' 
-
-```
-pipeline:
-  deploy:
-    image: co0p/drone-heroku-container-plugin
-    container: <your/docker/image>
-    app: <your/heroku/app/name>
     secrets: [ heroku_token ]
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      ```
-=======
->>>>>>> 69faf4b69dc11b35b35a2f628b57e3e0da00bb5a
-
-
+```
