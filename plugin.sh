@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 # needed variables taken from environment
 SECRETS=${PLUGIN_SECRETS}
