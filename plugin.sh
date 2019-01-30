@@ -1,9 +1,7 @@
 #!/bin/bash
 
 # needed variables taken from environment
-SECRETS=${PLUGIN_SECRETS}
-TOKEN=${SECRETS[0]}
-echo "token ${TOKEN}"
+TOKEN=${PLUGIN_TOKEN}
 CONTAINER=${PLUGIN_CONTAINER}
 APP=${PLUGIN_APP}
 

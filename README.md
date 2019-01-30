@@ -10,13 +10,13 @@ example pipeline:
  * app: the heroku app to deploy to
  * token: your heroku api key to access heroku  
 
-The heroku token should be saved in drone's secrets vault.
+TODO: The heroku token should be saved in drone's secrets vault.
 
 ```deploy:
     image: co0p/drone-heroku-plugin
-    container: you/container
+    container: your/container
     app: <your/heroku/app>
-    secrets: [ token ]
+    token: <your/heroku/token>
     volumes:
         - /var/run/docker.sock:/var/run/docker.sock
 ```
