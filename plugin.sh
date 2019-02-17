@@ -21,6 +21,8 @@ docker push registry.heroku.com/${APP}/web
 
 # 2. get the image id... 
 IMAGE_ID=$(docker inspect ${CONTAINER} --format {{.Id}})
+echo "using imageid: ${IMAGE_ID}"
+
 PATCH_PAYLOAD=${PAYLOAD/IMAGE_ID_TO_REPLACE/$IMAGE_ID}
 
 # 3. to deploy (release) the image to the specified heroku app
