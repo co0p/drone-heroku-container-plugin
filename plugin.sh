@@ -5,6 +5,9 @@ TOKEN=${PLUGIN_TOKEN}
 CONTAINER=${PLUGIN_CONTAINER}
 APP=${PLUGIN_APP}
 
+echo "using Container=${CONTAINER}"
+echo "using APP=${APP}"
+
 PAYLOAD='{
   "updates": [
     {
@@ -21,7 +24,7 @@ docker push registry.heroku.com/${APP}/web
 
 # 2. get the image id... 
 IMAGE_ID=$(docker inspect ${CONTAINER} --format {{.Id}})
-echo "using imageid: ${IMAGE_ID}"
+echo "using imageid=${IMAGE_ID}"
 
 PATCH_PAYLOAD=${PAYLOAD/IMAGE_ID_TO_REPLACE/$IMAGE_ID}
 
